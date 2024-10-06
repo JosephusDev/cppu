@@ -79,8 +79,8 @@ export const HomeScreen: React.FC = () => {
                     ))}
                 </Grid>
                 <Grid sx={{width: '100%', display:'flex', flexDirection: smDown ? 'column' : 'row', backgroundColor: theme.palette.background.default, marginBottom: 10}}>
-                    <BarChartComponent data={bar} title="Gráfico de Barras" />
-                    <PieChartComponent data={bar} title="Gráfico de Pizza" />
+                    <BarChartComponent data={bar} title="Membros por municípios" />
+                    <PieChartComponent data={bar} title="Membros por municípios" />
                 </Grid>
             </Container>
         </LayoutBaseDePagina>

@@ -172,7 +172,7 @@ export const MembroPorGrupos: React.FC = () => {
                 <TableCell align="center" sx={{ fontWeight: 'bold', position: 'sticky', top: 0, backgroundColor: 'background.paper', zIndex: 1 }}>Nº</TableCell>
                 <TableCell align="center" sx={{ fontWeight: 'bold', position: 'sticky', top: 0, backgroundColor: 'background.paper', zIndex: 1 }}>Nome</TableCell>
                 <TableCell align="center" sx={{ fontWeight: 'bold', position: 'sticky', top: 0, backgroundColor: 'background.paper', zIndex: 1 }}>CAP</TableCell>
-                <TableCell align="center" sx={{ fontWeight: 'bold', position: 'sticky', top: 0, backgroundColor: 'background.paper', zIndex: 1 }}>Cartão militente</TableCell>
+                <TableCell align="center" sx={{ fontWeight: 'bold', position: 'sticky', top: 0, backgroundColor: 'background.paper', zIndex: 1 }}>Cartão</TableCell>
                 <TableCell align="center" sx={{ fontWeight: 'bold', position: 'sticky', top: 0, backgroundColor: 'background.paper', zIndex: 1 }}>Função</TableCell>
                 <TableCell align="center" sx={{ fontWeight: 'bold', position: 'sticky', top: 0, backgroundColor: 'background.paper', zIndex: 1 }}>Foto</TableCell>
                 <TableCell align="center" sx={{ fontWeight: 'bold', position: 'sticky', top: 0, backgroundColor: 'background.paper', zIndex: 1 }}>Imprimir</TableCell>
@@ -182,11 +182,16 @@ export const MembroPorGrupos: React.FC = () => {
               {filteredMembros.map((membro, i) => (
                 <TableRow key={membro.id}>
                   <TableCell align="center">{i + 1}</TableCell>
-                  <TableCell align="center">{membro.nome}</TableCell>
+                  <TableCell 
+                    sx={{
+                      whiteSpace: 'nowrap',
+                    }} 
+                    align="center">{membro.nome}
+                  </TableCell>
                   <TableCell align="center">{membro.cap}</TableCell>
                   <TableCell align="center">{membro.cartao_militante}</TableCell>
                   <TableCell align="center">{membro.funcao}</TableCell>
-                  <TableCell align="center" onClick={() => abrirVisualizarFoto(`http://localhost:8800${membro.foto}`)}><Avatar src={`http://localhost:8800${membro.foto}`}/></TableCell>
+                  <TableCell align="center" onClick={() => abrirVisualizarFoto(membro.foto)}><Avatar src={membro.foto}/></TableCell>
                   <TableCell align="center">
                     <IconButton color='primary' onClick={() => imprimir(membro)}>
                       <Icon>print</Icon>

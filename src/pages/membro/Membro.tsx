@@ -481,7 +481,7 @@ export const Membro: React.FC = () => {
       {/* Modal para o PDFViewer */}
       {membroParaImprimir && (
         <Modal open={!!membroParaImprimir} onClose={handleModalClose}>
-          <Box sx={{ width: '100%', height: '100%', marginBottom: '5%' }}>
+          <Box sx={{ width: '100%', height: '100%'}}>
             <PDFViewer key={pdfKey} style={{ width: '100%', height: '100%' }}>
               <FichaMembro data={membroParaImprimir} />
             </PDFViewer>

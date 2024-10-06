@@ -88,7 +88,7 @@ const Login: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             >
                 <Avatar
                     src={require("../../img/avatar.png")}
-                    sx={{ width: theme.spacing(12), height: theme.spacing(12) }}
+                    sx={{ width: theme.spacing(8), height: theme.spacing(8) }}
                 />
                 <Typography variant='subtitle1' sx={{ marginY: 3, fontWeight: 'bold', textAlign: 'center' }}>Comitê Provincial do Partido MPLA</Typography>
                 <TextField
@@ -96,7 +96,7 @@ const Login: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     size='small'
                     label='Utilizador'
                     fullWidth
-                    style={{ marginBottom: 25, width: isSmallScreen ? '80%' : isMediumScreen ? '60%' : '60%' }}
+                    style={{ marginBottom: 25, width: isSmallScreen ? '100%' : isMediumScreen ? '70%' : '70%' }}
                     value={utilizador}
                     onChange={(e) => setUtilizador(e.target.value)}
                     disabled={carregando}
@@ -106,7 +106,7 @@ const Login: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     size='small'
                     label='Palavra-passe'
                     fullWidth
-                    style={{ marginBottom: 25, width: isSmallScreen ? '80%' : isMediumScreen ? '60%' : '60%' }}
+                    style={{ marginBottom: 25, width: isSmallScreen ? '100%' : isMediumScreen ? '70%' : '70%' }}
                     value={senha}
                     onChange={(e) => setSenha(e.target.value)}
                     disabled={carregando}
