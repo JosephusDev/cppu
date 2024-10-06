@@ -3,13 +3,10 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 
 import { useDrawerContext } from '../shared/contexts';
 import {
-  Categoria,
   HomeScreen,
   Membro,
-  Utilizadores,
   MembroPorGrupos,
-  CategoriaMembro,
-  Sync
+  CategoriaMembro
 } from '../pages';
 
 import { useAuthContext } from '../shared/contexts/AuthContext';
@@ -30,21 +27,6 @@ export const AppRoutes = () => {
           icon: 'people',
           path: '/membros',
           label: 'Membros',
-        },
-        {
-          icon: 'style',
-          path: '/categorias',
-          label: 'Categorias',
-        },
-        {
-          icon: 'people',
-          path: '/utilizadores',
-          label: 'Utilizadores',
-        },
-        {
-          icon: 'sync',
-          path: '/sync',
-          label: 'Sincronização',
         }
       ]);
     }else{
@@ -68,9 +50,6 @@ export const AppRoutes = () => {
       <Routes>
         <Route path="/home" element={<HomeScreen />} />
         <Route path="/membros" element={<Membro />} />
-        <Route path="/categorias" element={<Categoria />} />
-        <Route path="/sync" element={<Sync />} />
-        <Route path="/utilizadores" element={<Utilizadores />} />
         <Route path="/membrosporgrupos/:id/:tipo/:title" element={<MembroPorGrupos/>} />
         <Route path="/categoria_membro/:id/:nome" element={<CategoriaMembro/>} />
         <Route path="*" element={<Navigate to="/home" />} />
