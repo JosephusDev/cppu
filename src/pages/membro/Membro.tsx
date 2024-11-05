@@ -137,9 +137,18 @@ export const Membro: React.FC = () => {
                     sx={{
                       whiteSpace: 'nowrap',
                     }} 
-                    align="center">{membro.nome}
+                    align="center"
+                  >
+                    {membro.nome}
                   </TableCell>
-                  <TableCell align="center">{membro.funcao}</TableCell>
+                  <TableCell 
+                    sx={{
+                      whiteSpace: 'nowrap',
+                    }} 
+                    align="center"
+                  >
+                    {membro.funcao}
+                  </TableCell>
                   <TableCell align="center" onClick={() => abrirVisualizarFoto(membro.foto, membro.nome)}><Avatar src={membro.foto}/></TableCell>
                   <TableCell align="center">
                     <IconButton color='primary' onClick={() => navigate(`/categoria_membro/${membro.id}/${membro.nome}`)}>

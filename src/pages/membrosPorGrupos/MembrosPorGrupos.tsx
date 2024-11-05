@@ -190,7 +190,14 @@ export const MembroPorGrupos: React.FC = () => {
                   </TableCell>
                   <TableCell align="center">{membro.cap}</TableCell>
                   <TableCell align="center">{membro.cartao_militante}</TableCell>
-                  <TableCell align="center">{membro.funcao}</TableCell>
+                  <TableCell 
+                    sx={{
+                      whiteSpace: 'nowrap',
+                    }} 
+                    align="center"
+                  >
+                    {membro.funcao}
+                  </TableCell>
                   <TableCell align="center" onClick={() => abrirVisualizarFoto(membro.foto)}><Avatar src={membro.foto}/></TableCell>
                   <TableCell align="center">
                     <IconButton color='primary' onClick={() => imprimir(membro)}>
