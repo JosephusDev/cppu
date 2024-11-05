@@ -16,7 +16,7 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 const PieChartComponent: React.FC<PieChartComponentProps> = ({ data, title }) => {
   return (
-    <div style={{ width: '100%', height: 300, marginTop: 50 }}>
+    <div style={{ width: '100%', height: 400, marginBottom: 40, marginTop: 50 }}>
       <ResponsiveContainer>
         <PieChart>
           <Pie
