@@ -17,7 +17,7 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 const PieChartComponent: React.FC<PieChartComponentProps> = ({ data, title }) => {
   return (
     <div style={{ width: '100%', height: 300 }}>
-      <Typography sx={{fontWeight: "bold"}}>{title}</Typography>
+      <Typography sx={{fontWeight: "bold", marginY: 5, marginX: 2}}>{title}</Typography>
       <ResponsiveContainer>
         <PieChart>
           <Pie

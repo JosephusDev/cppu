@@ -15,7 +15,7 @@ interface BarChartComponentProps {
 const BarChartComponent: React.FC<BarChartComponentProps> = ({ data, title }) => {
   return (
     <div style={{ width: '100%', height: 300}}>
-      <Typography sx={{fontWeight: "bold"}}>{title}</Typography>
+      <Typography sx={{fontWeight: "bold", marginY: 5, marginX: 2}}>{title}</Typography>
       <ResponsiveContainer>
         <BarChart data={data} margin={{ top: 20, bottom: 30 }}>
           <CartesianGrid strokeDasharray="3 3" />
