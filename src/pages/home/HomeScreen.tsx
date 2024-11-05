@@ -78,7 +78,7 @@ export const HomeScreen: React.FC = () => {
                         <ResponsiveCard key={index} aoClicar={() => handleCardClick(card.id, card.tipo, card.title)} title={card.title.replace(/M-/g, "M/")} number={card.number} icon={card.icon} />
                     ))}
                 </Grid>
-                <Grid sx={{width: '100%', display:'flex', flexDirection: smDown ? 'column' : 'row', backgroundColor: theme.palette.background.default, marginBottom: 15}}>
+                <Grid sx={{width: '100%', display:'flex', flexDirection: 'column', backgroundColor: theme.palette.background.default}}>
                     <BarChartComponent data={bar} title="Membros por municípios" />
                     <PieChartComponent data={bar} title="Membros por municípios" />
                 </Grid>
