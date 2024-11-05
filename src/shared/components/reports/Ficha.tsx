@@ -138,7 +138,11 @@ const FichaMembro: React.FC<MembroPDFProps> = ({ data }) => (
         <Text style={styles.subtitle}>FICHA DE MEMBRO</Text>
       </View>
       <View style={styles.section}>
-        <Image style={styles.image} src={data.foto} />
+        {
+          data.foto && (
+            <Image style={styles.image} src={data.foto} />
+          )
+        }
         <Text style={styles.label}>Nome: <Text style={styles.value}>{data.nome}</Text></Text>
         <View style={styles.row}>
             <Text style={styles.label}>Data de Nascimento: <Text style={styles.value}>

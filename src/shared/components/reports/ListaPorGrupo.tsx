@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   tableCol: {
-    width: '20%',
+    width: '25%',
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: '#bfbfbf',
@@ -142,7 +142,6 @@ const FichaMembro: React.FC<MembroPDFProps> = ({ data, grupo, municipio }) => (
       <View style={styles.table}>
         {/* Cabeçalho da Tabela */}
         <View style={styles.tableRow}>
-          <View style={styles.tableCol}><Text style={styles.tableCellHeader}>Foto</Text></View>
           <View style={styles.tableCol}><Text style={styles.tableCellHeader}>Nome</Text></View>
           <View style={styles.tableCol}><Text style={styles.tableCellHeader}>CAP</Text></View>
           <View style={styles.tableCol}><Text style={styles.tableCellHeader}>Cartão Militante</Text></View>
@@ -152,9 +151,6 @@ const FichaMembro: React.FC<MembroPDFProps> = ({ data, grupo, municipio }) => (
         {/* Corpo da Tabela - Iteração sobre os dados */}
         {data.map((membro) => (
           <View style={styles.tableRow} key={membro.id}>
-            <View style={styles.tableCol}>
-              <Image style={styles.image} src={membro.foto} />
-            </View>
             <View style={styles.tableCol}><Text style={styles.tableCell}>{membro.nome}</Text></View>
             <View style={styles.tableCol}><Text style={styles.tableCell}>{membro.cap}</Text></View>
             <View style={styles.tableCol}><Text style={styles.tableCell}>{membro.cartao_militante}</Text></View>
