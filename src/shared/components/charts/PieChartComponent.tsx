@@ -16,7 +16,7 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 const PieChartComponent: React.FC<PieChartComponentProps> = ({ data, title }) => {
   return (
-    <div style={{ width: '100%', height: 300, marginTop: 50 }}>
+    <div style={{ width: '100%', height: 300, marginTop: 20 }}>
       <ResponsiveContainer>
         <PieChart>
           <Pie
@@ -28,7 +28,6 @@ const PieChartComponent: React.FC<PieChartComponentProps> = ({ data, title }) =>
             dataKey="membros"
             nameKey="municipio"
             label
-            
           >
             {data.map((d, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} values={d.name} />
